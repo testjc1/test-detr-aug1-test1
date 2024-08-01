@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-detr-aug1-test1 
+  description: Secure Supply Chain Example for AI enabled Object Detection Application example using DEtection TRansformer(DETR) model to detect objects in an image   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=test-detr-aug1-test1  
+    janus-idp.io/tekton: test-detr-aug1-test1 
+    backstage.io/kubernetes-id: test-detr-aug1-test1 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: jctestorg/test-detr-aug1-test1
+  tags: ["ai", "detr", "python"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
